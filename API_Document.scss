@@ -1,0 +1,59 @@
+.container{
+    margin-top: 20px;
+    .title{
+        text-align: left;
+        font-size: 30px;
+    }
+    @media (max-width:1180px){
+        .wrapper{
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+}
+
+.wrapper{
+    padding: 0 20px;
+    border: 1px solid;
+    border-radius: 10px;
+    .title{
+        text-align: left;
+        font-size: 25px;
+        font-style: italic;
+        border-bottom: 1px solid;
+    }
+    .content{
+        padding: 10px 0;
+        font-size: 15px;
+        .subtitle{
+            margin-bottom: 10px;
+        }
+    }
+   .card__container{
+        padding:0 20px;
+        border: 1px solid; 
+        border-radius: 10px;
+        .card{
+            margin: 10px 0px;
+            .card-header{
+                .btn{
+                    margin-left: 5px;
+                }
+                .card__desc{
+                    font-size: 20px;
+                    margin: 0px;
+                    line-height: 27px;
+                }
+            }
+            .card-body{
+                .card-text{
+                    color:grey;
+                    span{
+                        color:blue
+                    }
+                }
+            }
+
+        }
+    }
+}

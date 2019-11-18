@@ -1,0 +1,66 @@
+.container {
+  margin-top: 20px;
+}
+
+.container .title {
+  text-align: left;
+  font-size: 30px;
+}
+
+@media (max-width: 1180px) {
+  .container .wrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.wrapper {
+  padding: 0 20px;
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+.wrapper .title {
+  text-align: left;
+  font-size: 25px;
+  font-style: italic;
+  border-bottom: 1px solid;
+}
+
+.wrapper .content {
+  padding: 10px 0;
+  font-size: 15px;
+}
+
+.wrapper .content .subtitle {
+  margin-bottom: 10px;
+}
+
+.wrapper .card__container {
+  padding: 0 20px;
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+.wrapper .card__container .card {
+  margin: 10px 0px;
+}
+
+.wrapper .card__container .card .card-header .btn {
+  margin-left: 5px;
+}
+
+.wrapper .card__container .card .card-header .card__desc {
+  font-size: 20px;
+  margin: 0px;
+  line-height: 27px;
+}
+
+.wrapper .card__container .card .card-body .card-text {
+  color: grey;
+}
+
+.wrapper .card__container .card .card-body .card-text span {
+  color: blue;
+}
+/*# sourceMappingURL=API_Document.css.map */
