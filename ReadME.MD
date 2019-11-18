@@ -1,4 +1,4 @@
-##練習目的
+## 練習目的
 
 - Github Repository 操作指令
 - html/scss/jq等練習
