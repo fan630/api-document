@@ -28,40 +28,105 @@
                 <div class="feature">
                     <div class="card">
                         <h5 class="card-header d-flex">
-                            <button type="button" class="btn btn-primary disabled">GET</button>
-                            <!-- <button type="button" class="btn btn-outline-primary disabled">/todo</button> -->
+                            <button type="button" class="btn-sm btn-primary disabled">GET</button>
+                            <!-- <button type="button" class="btn-sm btn-sm-outline-primary disabled">/todo</button> -->
                             <p class="card__desc ml-auto">獲取所有todo</p>
                         </h5>
                         <div class="card-body">
-                            <h5 class="card-title">獲取所有todo資料</h5>
-                            <p>Example URI</p>
-                            <p class="card-text"><span>GET</span>  http://fan630.com.tw/todo/api/api.php</p>
-                            <p>curl 操作</p>
-                            <p>curl -X GET fan630.com.tw/todo/api/api.php</p>
+                            <h5 class="card-title"></h5>
+                            <strong>Example URI</strong>
+                            <p class="card-text">
+                                <span>GET</span>
+                                <samp>   http://fan630.com.tw/todo/api/api.php</samp>
+                            </p>
+                            <p>
+                                <!-- <span><strong>curl 操作</strong></span> -->
+                                <code>&lt;curl -X GET fan630.com.tw/todo/api/api.php&gt;</code>
+                            </p>
                         </div>
                     </div>
                     <div class="card">
-                        <h5 class="card-header">Featured</h5>
+                        <h5 class="card-header d-flex">
+                            <button type="button" class="btn-sm btn-primary disabled">GET</button>
+                            <code class="uri">/{:id}</code>
+                            <!-- <button type="button" class="btn-sm btn-sm-outline-primary disabled">/todo</button> -->
+                            <p class="card__desc ml-auto">獲取單一todo</p>
+                        </h5>
                         <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title"></h5>
+                            <strong>Example URI</strong>
+                            <p class="card-text">
+                                <span>GET</span>
+                                <samp> http://fan630.com.tw/todo/api/api.php/{id}</samp>
+                            </p>
+                            <p>
+                                <!-- <span><strong>curl 操作</strong></span> -->
+                                <code>&lt;curl -X GET fan630.com.tw/todo/api/api.php/91&gt;</code>
+                            </p>
                         </div>
                     </div>
-                    <div class="card">
-                        <h5 class="card-header">Featured</h5>
+                    <div class="card border-danger">
+                        <h5 class="card-header border-danger d-flex">
+                            <button type="button" class="btn-sm btn-primary disabled">Delete</button>
+                            <code class="uri">/{:id}</code>
+                            <!-- <button type="button" class="btn-sm btn-sm-outline-primary disabled">/todo</button> -->
+                            <p class="card__desc ml-auto">刪除單筆todo</p>
+                        </h5>
                         <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title"></h5>
+                            <strong>Example URI</strong>
+                            <p class="card-text">
+                                <span>GET</span>
+                                <samp> http://fan630.com.tw/todo/api/api.php/{id}</samp>
+                            </p>
+                            <p>
+                                <!-- <span><strong>curl 操作</strong></span> -->
+                                <code>&lt;curl -X DELETE fan630.com.tw/todo/api/api.php/92&gt;</code>
+                            </p>
                         </div>
                     </div>
-                    <div class="card">
-                        <h5 class="card-header">Featured</h5>
+                    <div class="card border-success">
+                        <h5 class="card-header border-success d-flex">
+                            <button type="button" class="btn-sm btn-primary disabled">POST</button>
+                            <!-- <code class="uri">/{:id}</code> -->
+                            <!-- <button type="button" class="btn-sm btn-sm-outline-primary disabled">/todo</button> -->
+                            <p class="card__desc ml-auto">新增todo</p>
+                        </h5>
                         <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title"></h5>
+                            <strong>Example URI</strong>
+                            <p class="card-text">
+                                <span>POST</span>
+                                <samp> http://fan630.com.tw/todo/api/api.php/</samp>
+                            </p>
+                            <strong>Request with Body</strong>
+                            <p class="card-text">
+                                <span>POST</span>
+                                <samp> http://fan630.com.tw/todo/api/api.php/</samp>
+                            </p>
+                            <p>
+                                <code>&lt;curl -X POST fan630.com.tw/todo/api/api.php -d "content=homework"&gt;</code>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card border-info">
+                        <h5 class="card-header border-info d-flex">
+                            <button type="button" class="btn-sm btn-primary disabled">PATCH</button>
+                            <code class="uri">/{:id}</code>
+                            <!-- <button type="button" class="btn-sm btn-sm-outline-primary disabled">/todo</button> -->
+                            <p class="card__desc ml-auto">修改單筆todo</p>
+                        </h5>
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <strong>Example URI</strong>
+                            <p class="card-text">
+                                <span>POST</span>
+                                <samp> http://fan630.com.tw/todo/api/api.php/{id}</samp>
+                            </p>
+                            <strong>Request with Body</strong>
+                            <p>
+                                <code>&lt;curl -X PATCH fan630.com.tw/todo/api/api.php/93 -d "revise=修改成功&state=1"&gt;</code>
+                            </p>
                         </div>
                     </div>
                 </div>

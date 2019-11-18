@@ -1,13 +1,12 @@
+
+
 .container{
-    margin-top: 20px;
-    .title{
-        text-align: left;
-        font-size: 30px;
-    }
-    @media (max-width:1180px){
-        .wrapper{
-            width: 100%;
-            margin: 0 auto;
+    margin: 20px auto;
+    @media (min-width: 576px){
+    width: 800px;
+        .title{
+            text-align: left;
+            font-size: 30px;
         }
     }
 }
@@ -24,13 +23,14 @@
     }
     .content{
         padding: 10px 0;
-        font-size: 15px;
+        font-size: 18px;
         .subtitle{
             margin-bottom: 10px;
         }
     }
    .card__container{
-        padding:0 20px;
+        padding:0px 20px;
+        margin-bottom:20px;
         border: 1px solid; 
         border-radius: 10px;
         .card{
@@ -39,8 +39,16 @@
                 .btn{
                     margin-left: 5px;
                 }
+                .uri{
+                    margin-left: 5px;
+                    padding:0 5px;
+                    line-height: 28px;
+                    background-color: #3333;
+                    border: 1px solid;
+                    color:rgba(0,0,0,0.3)
+                }
                 .card__desc{
-                    font-size: 20px;
+                    font-size: 15px;
                     margin: 0px;
                     line-height: 27px;
                 }
@@ -53,7 +61,6 @@
                     }
                 }
             }
-
         }
     }
 }

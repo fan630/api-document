@@ -1,16 +1,14 @@
 .container {
-  margin-top: 20px;
+  margin: 20px auto;
 }
 
-.container .title {
-  text-align: left;
-  font-size: 30px;
-}
-
-@media (max-width: 1180px) {
-  .container .wrapper {
-    width: 100%;
-    margin: 0 auto;
+@media (min-width: 576px) {
+  .container {
+    width: 800px;
+  }
+  .container .title {
+    text-align: left;
+    font-size: 30px;
   }
 }
 
@@ -29,7 +27,7 @@
 
 .wrapper .content {
   padding: 10px 0;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .wrapper .content .subtitle {
@@ -37,7 +35,8 @@
 }
 
 .wrapper .card__container {
-  padding: 0 20px;
+  padding: 0px 20px;
+  margin-bottom: 20px;
   border: 1px solid;
   border-radius: 10px;
 }
@@ -50,8 +49,17 @@
   margin-left: 5px;
 }
 
+.wrapper .card__container .card .card-header .uri {
+  margin-left: 5px;
+  padding: 0 5px;
+  line-height: 28px;
+  background-color: #3333;
+  border: 1px solid;
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .wrapper .card__container .card .card-header .card__desc {
-  font-size: 20px;
+  font-size: 15px;
   margin: 0px;
   line-height: 27px;
 }
