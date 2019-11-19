@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./API_Document.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="./API_Document.js"></script>
     <title>Week19 API document</title>
 </head>
 <body>
@@ -20,113 +30,153 @@
                 </div>
                 <ul class="subtitle__list">
                     <li>id： 事項 id</li>
-                    <li>content： todo 事項</li>
+                    <li>todo： todo 事項</li>
                     <li>state： todo 狀態，0 為未完成，1 為已完成</li>
                 </ul>
             </div>
             <div class="card__container">
                 <div class="feature">
-                    <div class="card">
-                        <h5 class="card-header d-flex">
+                    <div class="card border-primary">
+                        <h5 class="card-header border-primary d-flex">
                             <button type="button" class="btn-sm btn-primary disabled">GET</button>
-                            <!-- <button type="button" class="btn-sm btn-sm-outline-primary disabled">/todo</button> -->
                             <p class="card__desc ml-auto">獲取所有todo</p>
                         </h5>
                         <div class="card-body">
-                            <h5 class="card-title"></h5>
-                            <strong>Example URI</strong>
-                            <p class="card-text">
-                                <span>GET</span>
-                                <samp>   http://fan630.com.tw/todo/api/api.php</samp>
-                            </p>
-                            <p>
-                                <!-- <span><strong>curl 操作</strong></span> -->
-                                <code>&lt;curl -X GET fan630.com.tw/todo/api/api.php&gt;</code>
-                            </p>
+                            <div class="card-title">
+                                <strong>Example URI</strong>
+                                <p>
+                                    <a href="#">http://fan630.com.tw/todo/api/api.php</a>
+                                </p>
+                                <code>
+                                    curl -X GET fan630.com.tw/todo/api/api.php
+                                </code>
+                            </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <h5 class="card-header d-flex">
+                    <div class="card border-primary">
+                        <h5 class="card-header border-primary d-flex">
                             <button type="button" class="btn-sm btn-primary disabled">GET</button>
                             <code class="uri">/{:id}</code>
-                            <!-- <button type="button" class="btn-sm btn-sm-outline-primary disabled">/todo</button> -->
                             <p class="card__desc ml-auto">獲取單一todo</p>
                         </h5>
                         <div class="card-body">
-                            <h5 class="card-title"></h5>
-                            <strong>Example URI</strong>
-                            <p class="card-text">
-                                <span>GET</span>
-                                <samp> http://fan630.com.tw/todo/api/api.php/{id}</samp>
-                            </p>
-                            <p>
-                                <!-- <span><strong>curl 操作</strong></span> -->
-                                <code>&lt;curl -X GET fan630.com.tw/todo/api/api.php/91&gt;</code>
-                            </p>
+                            <div class="card-title">
+                                <strong>Example URI</strong>
+                                <p>
+                                    <a href="#">http://fan630.com.tw/todo/api/api.php/139</a>
+                                </p>
+                                <code>
+                                    curl -X GET fan630.com.tw/todo/api/api.php/139
+                                </code>
+                            </div>
+                            <div class="card-info">
+                                <div class="text">
+                                    Response
+                                    <span class="status">200</span>
+                                    <button class="btn">show</button>
+                                </div>
+                                <pre>
+                                    <code>      
+    [
+      {
+        "id": 139,
+        "todo": "homework",
+        "state": 0,
+      }
+    ]
+                                    </code>
+                                </pre>
+                            </div>
                         </div>
                     </div>
                     <div class="card border-danger">
                         <h5 class="card-header border-danger d-flex">
-                            <button type="button" class="btn-sm btn-primary disabled">Delete</button>
+                            <button type="button" class="btn-sm btn-danger disabled">Delete</button>
                             <code class="uri">/{:id}</code>
-                            <!-- <button type="button" class="btn-sm btn-sm-outline-primary disabled">/todo</button> -->
                             <p class="card__desc ml-auto">刪除單筆todo</p>
                         </h5>
                         <div class="card-body">
-                            <h5 class="card-title"></h5>
-                            <strong>Example URI</strong>
-                            <p class="card-text">
-                                <span>GET</span>
-                                <samp> http://fan630.com.tw/todo/api/api.php/{id}</samp>
-                            </p>
-                            <p>
-                                <!-- <span><strong>curl 操作</strong></span> -->
-                                <code>&lt;curl -X DELETE fan630.com.tw/todo/api/api.php/92&gt;</code>
-                            </p>
+                            <div class="card-title">
+                                <strong>Example URI</strong>
+                                <p>
+                                    <a href="#">http://fan630.com.tw/todo/api/api.php/139</a>
+                                </p>
+                                <code>
+                                    curl -X DELETE fan630.com.tw/todo/api/api.php/139
+                                </code>
+                            </div>
                         </div>
                     </div>
                     <div class="card border-success">
-                        <h5 class="card-header border-success d-flex">
-                            <button type="button" class="btn-sm btn-primary disabled">POST</button>
-                            <!-- <code class="uri">/{:id}</code> -->
-                            <!-- <button type="button" class="btn-sm btn-sm-outline-primary disabled">/todo</button> -->
+                        <div class="card-header border-success d-flex">
+                            <button type="button" class="btn-sm btn-success disabled">POST</button>
                             <p class="card__desc ml-auto">新增todo</p>
-                        </h5>
-                        <div class="card-body">
-                            <h5 class="card-title"></h5>
-                            <strong>Example URI</strong>
-                            <p class="card-text">
-                                <span>POST</span>
-                                <samp> http://fan630.com.tw/todo/api/api.php/</samp>
-                            </p>
-                            <strong>Request with Body</strong>
-                            <p class="card-text">
-                                <span>POST</span>
-                                <samp> http://fan630.com.tw/todo/api/api.php/</samp>
-                            </p>
-                            <p>
-                                <code>&lt;curl -X POST fan630.com.tw/todo/api/api.php -d "content=homework"&gt;</code>
-                            </p>
                         </div>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <strong>Example URI</strong>
+                                <p>
+                                    <a href="#"> http://fan630.com.tw/todo/api/api.php</a>
+                                </p>
+                                <strong>Request with Body</strong>
+                                    <code>
+                                        curl -X POST fan630.com.tw/todo/api/api.php -d "content=homework"
+                                    </code>
+                            </div>
+                            
+                            <div class="card-info">
+                                <div class="text">
+                                    Response
+                                    <span class="status">200</span>
+                                    <button class="btn">show</button>
+                                </div>
+                                <pre>
+                                    <code>      
+    [
+      {
+        "result":"success"
+        "id": 140,
+        "content": "homework",
+      }
+    ]
+                                    </code>
+                                </pre>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="card border-info">
                         <h5 class="card-header border-info d-flex">
-                            <button type="button" class="btn-sm btn-primary disabled">PATCH</button>
+                            <button type="button" class="btn-info btn-sm btn-primary disabled">PATCH</button>
                             <code class="uri">/{:id}</code>
-                            <!-- <button type="button" class="btn-sm btn-sm-outline-primary disabled">/todo</button> -->
                             <p class="card__desc ml-auto">修改單筆todo</p>
                         </h5>
                         <div class="card-body">
-                            <h5 class="card-title"></h5>
-                            <strong>Example URI</strong>
-                            <p class="card-text">
-                                <span>POST</span>
-                                <samp> http://fan630.com.tw/todo/api/api.php/{id}</samp>
-                            </p>
-                            <strong>Request with Body</strong>
-                            <p>
-                                <code>&lt;curl -X PATCH fan630.com.tw/todo/api/api.php/93 -d "revise=修改成功&state=1"&gt;</code>
-                            </p>
+                            <div class="card-title">
+                                <strong>Example URI</strong>
+                                <p>
+                                    <a href="#"> http://fan630.com.tw/todo/api/api.php/</a>
+                                </p>
+                                <strong>Request with Body</strong>
+                                <code>
+                                    curl -X PATCH fan630.com.tw/todo/api/api.php/140 -d "revise=修改成功&state=1"
+                                </code>
+                            </div>
+                            <div class="card-info">
+                                <div class="text">
+                                    Response
+                                    <span class="status">200</span>
+                                    <button class="btn">show</button>
+                                </div>
+                                <pre>
+                                    <code>      
+    {
+        "result":"success",
+        "message":"更新成功"
+    }
+                                    </code>
+                                </pre>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -136,14 +186,6 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+
 </body>
 </html>
